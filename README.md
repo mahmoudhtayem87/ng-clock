@@ -1,4 +1,4 @@
-# Angular Clock Web Component Sample Code
+# Angular Clock - Web Component - Sample Code
 
 Liferay DXP has traditionally offered a wide variety of extension mechanisms to extend and customize the platform. Most of these mechanisms require the deployment of custom-written code to be activated.
 As we move towards SaaS solutions and Cloud offerings, we need to provide other extension mechanisms that don't require customers to deliver and run arbitrary code on the company servers.
