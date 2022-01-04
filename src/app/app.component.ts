@@ -13,7 +13,6 @@ export class AngularClock implements AfterViewInit {
     this.timerId = this.getTime();
   }
   getTime() {
-
     setInterval(()=>{
       this.clock();
     }, 100);

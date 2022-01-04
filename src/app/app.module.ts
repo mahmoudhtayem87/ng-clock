@@ -21,7 +21,6 @@ export class AppModule {
     const appElement = createCustomElement(AngularClock, {
       injector: this.injector
     }); 
-
     customElements.define("ng-clock", appElement);
   }
 }
