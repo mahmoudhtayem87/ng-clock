@@ -1,7 +1,7 @@
 import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
-  selector: 'angualr-clock',
+  selector: 'ng-clock',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

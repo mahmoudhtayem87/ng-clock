@@ -13,7 +13,8 @@ import { APP_BASE_HREF } from '@angular/common';
     AppRoutingModule
   ],
   providers: [{provide: APP_BASE_HREF, useValue: "/"}],
-  entryComponents: [AngularClock]
+  entryComponents: [AngularClock],
+  bootstrap : [AngularClock]
 })
 export class AppModule {
   constructor(private injector: Injector) {
