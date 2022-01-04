@@ -1,18 +1,28 @@
-import { NgModule } from '@angular/core';
+import { Injector, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { createCustomElement } from "@angular/elements";
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-
+import { AngularClock } from './app.component';
+import { APP_BASE_HREF } from '@angular/common';
 @NgModule({
   declarations: [
-    AppComponent
+    AngularClock
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [{provide: APP_BASE_HREF, useValue: "/"}],
+  entryComponents: [AngularClock]
 })
-export class AppModule { }
+export class AppModule {
+  constructor(private injector: Injector) {
+    const appElement = createCustomElement(AngularClock, {
+      injector: this.injector
+    }); 
+
+    customElements.define("ng-clock", appElement);
+  }
+}
+
+
