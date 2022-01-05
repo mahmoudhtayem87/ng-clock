@@ -6,7 +6,6 @@ import { AfterViewInit, Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AngularClock implements AfterViewInit {
-
   timerId: any;
   ngAfterViewInit() {
     this.generateDialLines();
@@ -44,7 +43,6 @@ export class AngularClock implements AfterViewInit {
     if(month < 9) {
       monthtext = "0" + month;
     }
-    
     this.h_transform = "rotate("+hDeg+"deg)";
     this.m_transform = "rotate("+mDeg+"deg)";
     this.s_transform = "rotate("+sDeg+"deg)";
@@ -64,5 +62,4 @@ export class AngularClock implements AfterViewInit {
   public date_text :any;
   public day_text : any;
   public diallines = new Array();
-  
 }
